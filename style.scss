@@ -21,9 +21,14 @@ li {
     align-items: center;
     font-size: 10px;
 
-    li {
+    a {
         padding: 30px;
+        text-decoration: none;
+        color: hsl(229, 8%, 60%);
+    }
 
+    a:hover {
+        color: hsl(0, 94%, 66%);
     }
 
     button {
@@ -46,5 +51,9 @@ li {
 .navbar_links {
     justify-content: flex-end;
     padding-right: 50px;
+}
+
+.margins {
+
 }
 

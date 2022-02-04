@@ -15,8 +15,12 @@ li {
   justify-content: space-between;
   align-items: center;
   font-size: 10px; }
-  .navbar li {
-    padding: 30px; }
+  .navbar a {
+    padding: 30px;
+    text-decoration: none;
+    color: #9194a1; }
+  .navbar a:hover {
+    color: #fa5757; }
   .navbar button {
     margin: 40px;
     text-transform: uppercase;
