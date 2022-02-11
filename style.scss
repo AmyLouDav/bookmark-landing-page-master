@@ -1,8 +1,34 @@
 $font-stack: 'Rubik', sans-serif;
+$desktop: 1440px;
+$tablet: 720px;
+$mobile: 375px;
+
+
+.margins {
+    margin: 0 10px;
+        
+    @media screen and (max-width: $tablet) and (min-width: $mobile) {
+        margin: 0 50px;
+    }
+    @media screen and (min-width: $desktop) {
+        margin: 0 100px;
+    }
+}
+
+.shape {
+    height: 186px;
+    width: 261px;
+    background-color: hsl(231, 69%, 60%);
+    border-radius: 80px;
+    margin-bottom: 30px;
+    float: left;
+    margin-right: 20px;
+}
 
 body {
     font: 100% $font-stack;
     font-weight: 400;
+    text-align: center;
 }
 
 li {
@@ -13,47 +39,99 @@ li {
 }
 
 .navbar {
+
+    .navbar_img {
+        height: 22px;
+        padding-left: 20px;
+    }
     
-    text-transform: uppercase;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 10px;
-
-    a {
-        padding: 30px;
-        text-decoration: none;
-        color: hsl(229, 8%, 60%);
+    .logo_container {
+        justify-content: flex-start;
+        display: flex;
+        padding-top: 30px;
+    }
+    
+    .navbar_links {
+        justify-content: flex-end;
+        // padding-right: 50px;
     }
 
-    a:hover {
-        color: hsl(0, 94%, 66%);
-    }
-
-    button {
-        margin: 40px;
+    @media screen and (min-width: $desktop) {
+        margin: 0 100px;
         text-transform: uppercase;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
         font-size: 10px;
+    
+        a {
+            padding: 30px;
+            text-decoration: none;
+            color: hsl(229, 8%, 60%);
+        }
+    
+        a:hover {
+            color: hsl(0, 94%, 66%);
+        }
+    
+        button {
+            margin: 40px;
+            text-transform: uppercase;
+            font-size: 10px;
+        }
     }
 }
 
-.navbar_img {
-    height: 17px;
-    padding-left: 20px;
+.section_img {
+    width: 100%;
+    
 }
 
-.logo_container {
-    justify-content: flex-start;
-    padding-left: 70px;
-}
-
-.navbar_links {
-    justify-content: flex-end;
-    padding-right: 50px;
-}
-
-.margins {
-
-}
+.dropbtn {
+    background-color: red;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+    position: relative;
+    display:flex;
+    justify-content: end;
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {background-color: #f1f1f1}
+  
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  /* Change the background color of the dropdown button when the dropdown content is shown */
+  .dropdown:hover .dropbtn {
+    background-color: red;
+  }
 
